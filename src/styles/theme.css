@@ -1,0 +1,10 @@
+/* Design System Constants & Tokens */
+:root {
+  --color-primary: #123458;
+  --color-secondary: #2563EB;
+  --color-accent: #F59E0B;
+  --color-bg: #F8FAFC;
+  --color-dark-text: #111827;
+  --color-muted-text: #6B7280;
+  --font-family-base: 'Manrope', sans-serif;
+}
