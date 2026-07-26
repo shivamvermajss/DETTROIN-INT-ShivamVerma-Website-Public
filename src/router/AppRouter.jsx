@@ -8,6 +8,7 @@ import AdmissionsPage from '../pages/Admissions/AdmissionsPage';
 import InfrastructurePage from '../pages/Infrastructure/InfrastructurePage';
 import GalleryPage from '../pages/Gallery/GalleryPage';
 import ContactPage from '../pages/Contact/ContactPage';
+import NotFoundPage from '../pages/NotFound/NotFoundPage';
 
 const AppRouter = () => {
   return (
@@ -20,6 +21,7 @@ const AppRouter = () => {
         <Route path="infrastructure" element={<InfrastructurePage />} />
         <Route path="gallery" element={<GalleryPage />} />
         <Route path="contact" element={<ContactPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
   );
