@@ -13,35 +13,37 @@ const itemVariants = {
 
 /**
  * AboutFeatures Component
- * Renders 4 key institutional highlights (Smart Classrooms, Faculty, Infrastructure, Co-curricular).
+ * Renders 6 key feature cards for the merged About + Why Choose Us section.
  */
 const AboutFeatures = () => {
-  const { highlights } = aboutData;
+  const { featureCards } = aboutData;
 
   return (
-    <div className="my-8">
-      <h3 className="text-xl font-extrabold text-[#123458] mb-4">
-        Key School Highlights
+    <div className="my-6">
+      <h3 className="text-lg font-extrabold text-[#123458] mb-4">
+        Why Parents Trust Pavna School
       </h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {highlights.map((item) => {
-          const { id, title, description, icon: Icon } = item;
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+        {featureCards.map((item) => {
+          const { id, title, description, icon: Icon, color } = item;
           return (
             <motion.div
               key={id}
               variants={itemVariants}
-              className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md hover:border-blue-200 transition-all duration-200 flex items-start gap-4 group"
+              whileHover={{ y: -3 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+              className="p-3.5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md hover:border-blue-300 transition-all duration-300 flex items-start gap-3.5 group cursor-default"
             >
-              <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 group-hover:bg-[#123458] group-hover:text-white transition-colors duration-300">
-                <Icon className="w-5 h-5" aria-hidden="true" />
+              <div className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 border ${color} group-hover:scale-110 group-hover:bg-[#123458] group-hover:text-white transition-all duration-300`}>
+                <Icon className="w-4 h-4" aria-hidden="true" />
               </div>
 
               <div>
-                <h4 className="text-base font-bold text-slate-900 group-hover:text-[#123458] transition-colors">
+                <h4 className="text-sm font-bold text-slate-900 group-hover:text-[#123458] transition-colors">
                   {title}
                 </h4>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mt-1">
+                <p className="text-xs text-slate-600 leading-relaxed mt-0.5">
                   {description}
                 </p>
               </div>

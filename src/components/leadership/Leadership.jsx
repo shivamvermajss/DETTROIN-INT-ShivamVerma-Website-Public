@@ -6,7 +6,6 @@ import ChairmanCard from './ChairmanCard';
 import PrincipalCard from './PrincipalCard';
 import LeadershipHighlights from './LeadershipHighlights';
 import QuoteCard from './QuoteCard';
-import LeadershipCTA from './LeadershipCTA';
 
 const profileContainerVariants = {
   hidden: { opacity: 0 },
@@ -21,7 +20,7 @@ const profileContainerVariants = {
 
 /**
  * Leadership Component
- * Phase 10 – Main section showcasing Chairman & Principal profiles, leadership pillars, featured quote, and CTAs.
+ * Phase 10 – Main section showcasing Chairman & Principal profiles, leadership pillars, and featured quote.
  */
 const Leadership = () => {
   return (
@@ -63,9 +62,6 @@ const Leadership = () => {
 
         {/* Featured Institutional Quote */}
         <QuoteCard />
-
-        {/* Leadership Section CTA */}
-        <LeadershipCTA />
       </Container>
     </section>
   );

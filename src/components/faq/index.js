@@ -5,6 +5,5 @@ export { default as FAQCategories } from './FAQCategories';
 export { default as FAQAccordion } from './FAQAccordion';
 export { default as FAQItem } from './FAQItem';
 export { default as ContactSupportCard } from './ContactSupportCard';
-export { default as FAQCTA } from './FAQCTA';
 export { faqData, faqCategories } from './FAQData';
 export { default } from './FAQ';

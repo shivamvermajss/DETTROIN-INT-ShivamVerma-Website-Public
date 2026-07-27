@@ -5,12 +5,11 @@ import FAQSearch from './FAQSearch';
 import FAQCategories from './FAQCategories';
 import FAQAccordion from './FAQAccordion';
 import ContactSupportCard from './ContactSupportCard';
-import FAQCTA from './FAQCTA';
 import { faqData } from './FAQData';
 
 /**
  * FAQ Component
- * Phase 16 – Main Frequently Asked Questions section featuring instant live search, category chips filtering, single-open accordion items, empty search states, support card, and CTAs.
+ * Phase 16 – Main Frequently Asked Questions section featuring instant live search, category chips filtering, single-open accordion items, empty search states, and support card.
  */
 const FAQ = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -40,7 +39,8 @@ const FAQ = () => {
 
   return (
     <section
-      className="relative py-16 sm:py-20 lg:py-28 bg-white overflow-hidden"
+      id="faq"
+      className="relative py-12 sm:py-16 lg:py-20 bg-[#F6F9FF] overflow-hidden"
       aria-labelledby="faq-heading"
     >
       {/* Background Soft Ambient Accents */}
@@ -78,9 +78,6 @@ const FAQ = () => {
 
         {/* Still Have Questions Support Card */}
         <ContactSupportCard />
-
-        {/* Section CTA */}
-        <FAQCTA />
       </Container>
     </section>
   );

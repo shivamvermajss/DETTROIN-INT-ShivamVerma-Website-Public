@@ -1,12 +1,12 @@
 import React from 'react';
 import SEOHead from '../../components/common/SEOHead';
-import AcademicsSection from '../../components/sections/academics/AcademicsSection';
+import AcademicPrograms from '../../components/academics/AcademicPrograms';
 
 const AcademicsPage = () => {
   return (
-    <div className="space-y-8">
+    <div>
       <SEOHead title="Academics | Pavna International School" description="Academics at Pavna International School Aligarh" />
-      <AcademicsSection />
+      <AcademicPrograms />
     </div>
   );
 };

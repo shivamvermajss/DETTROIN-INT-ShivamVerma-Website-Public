@@ -3,28 +3,23 @@ import {
   Target, 
   Compass, 
   ShieldCheck, 
-  Heart, 
-  Lightbulb, 
-  Award, 
-  HandHeart, 
-  CheckCircle2, 
-  Monitor, 
-  Users, 
-  Building2, 
-  Sparkles 
+  GraduationCap,
+  MonitorSmartphone,
+  BookOpen,
+  Dumbbell,
+  FlaskConical
 } from 'lucide-react';
 
 /**
  * About Section Data
- * Contains content for About School introduction, mission/vision, core values, highlights, and CTA.
+ * Contains content for About School introduction, mission/vision, 6 core feature cards, and CTA.
  */
 export const aboutData = {
   badge: "About Pavna School",
   heading: "Nurturing Future Leaders Through Excellence in Education",
   paragraphs: [
     "Established in 1998, Pavna International School (formerly DPS Aligarh) stands as a beacon of academic distinction, character building, and innovative education. Spread across a state-of-the-art campus, we combine traditional values with modern learning methodologies.",
-    "Our student-centered philosophy integrates the CBSE curriculum with AI & Robotics, Social-Emotional Learning (SEEL framework), world-class sports academies, and vibrant co-curricular programs designed to foster critical thinking and leadership.",
-    "We provide a safe, inclusive, and empowering environment where every learner is inspired to discover their unique potential, excel academically, and emerge as responsible global citizens ready to lead."
+    "Our student-centered philosophy integrates the CBSE curriculum with AI & Robotics, Social-Emotional Learning (SEEL framework), world-class sports academies, and vibrant co-curricular programs designed to foster critical thinking and leadership."
   ],
   floatingBadge: {
     icon: Trophy,
@@ -54,78 +49,52 @@ export const aboutData = {
       bgLight: "bg-amber-50/70 border-amber-100 text-amber-700"
     }
   ],
-  values: [
-    {
-      id: "integrity",
-      title: "Integrity",
-      description: "Upholding honesty, ethical principles, and strong moral character in all endeavors.",
-      icon: ShieldCheck,
-      color: "text-blue-600 bg-blue-50"
-    },
-    {
-      id: "respect",
-      title: "Respect",
-      description: "Fostering mutual empathy, inclusivity, and dignity across our diverse school community.",
-      icon: Heart,
-      color: "text-rose-600 bg-rose-50"
-    },
-    {
-      id: "innovation",
-      title: "Innovation",
-      description: "Embracing creative problem-solving, modern technology, and forward-thinking ideas.",
-      icon: Lightbulb,
-      color: "text-amber-600 bg-amber-50"
-    },
-    {
-      id: "excellence",
-      title: "Excellence",
-      description: "Striving for highest standards in academic rigor, sports, and holistic development.",
-      icon: Award,
-      color: "text-indigo-600 bg-indigo-50"
-    },
-    {
-      id: "compassion",
-      title: "Compassion",
-      description: "Encouraging kindness, social responsibility, and active service to society.",
-      icon: HandHeart,
-      color: "text-emerald-600 bg-emerald-50"
-    },
-    {
-      id: "responsibility",
-      title: "Responsibility",
-      description: "Instilling accountability, self-discipline, and environmental stewardship.",
-      icon: CheckCircle2,
-      color: "text-teal-600 bg-teal-50"
-    }
-  ],
-  highlights: [
-    {
-      id: "smart-classrooms",
-      title: "Smart Classrooms",
-      description: "Interactive digital boards, high-speed connectivity, and modern learning tools.",
-      icon: Monitor
-    },
+  featureCards: [
     {
       id: "experienced-faculty",
       title: "Experienced Faculty",
-      description: "Qualified educators dedicated to personalized mentorship and academic success.",
-      icon: Users
+      description: "Dedicated educators offering personalized guidance and academic excellence.",
+      icon: GraduationCap,
+      color: "bg-blue-50 text-blue-600 border-blue-100"
     },
     {
-      id: "modern-infrastructure",
-      title: "Modern Infrastructure",
-      description: "Advanced science & AI labs, sprawling sports facilities, and safe residential boarding.",
-      icon: Building2
+      id: "smart-classrooms",
+      title: "Smart Classrooms",
+      description: "Digitally-enabled interactive classrooms with modern audio-visual tools.",
+      icon: MonitorSmartphone,
+      color: "bg-indigo-50 text-indigo-600 border-indigo-100"
     },
     {
-      id: "co-curricular",
-      title: "Co-curricular Activities",
-      description: "Extensive programs in music, performing arts, robotics, debate, and athletic sports.",
-      icon: Sparkles
+      id: "cbse-curriculum",
+      title: "CBSE Curriculum",
+      description: "Enriched national framework with AI & Robotics and SEEL frameworks.",
+      icon: BookOpen,
+      color: "bg-amber-50 text-amber-600 border-amber-100"
+    },
+    {
+      id: "safe-campus",
+      title: "Safe & Secure Campus",
+      description: "24/7 CCTV surveillance, strict access control, and safety protocols.",
+      icon: ShieldCheck,
+      color: "bg-emerald-50 text-emerald-600 border-emerald-100"
+    },
+    {
+      id: "sports-activities",
+      title: "Sports & Co-Curricular",
+      description: "Pro coaching for swimming, basketball, shooting, tennis, and martial arts.",
+      icon: Dumbbell,
+      color: "bg-rose-50 text-rose-600 border-rose-100"
+    },
+    {
+      id: "modern-laboratories",
+      title: "Modern Laboratories",
+      description: "Well-equipped physics, chemistry, biology, math, and computer science labs.",
+      icon: FlaskConical,
+      color: "bg-cyan-50 text-cyan-600 border-cyan-100"
     }
   ],
   cta: {
-    label: "Learn More About Us",
+    label: "Explore Our Legacy & Campus",
     path: "/about"
   }
 };

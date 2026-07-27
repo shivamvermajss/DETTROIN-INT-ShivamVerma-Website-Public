@@ -84,32 +84,43 @@ const GalleryLightbox = ({ isOpen, currentIndex, images, onClose, onPrev, onNext
             <ChevronRight className="w-6 h-6" />
           </button>
 
-          {/* Main Lightbox Content Area */}
+          {/* Main Lightbox Content Area with Spring Entrance */}
           <motion.div
             key={currentImage.id}
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.3 }}
+            initial={{ opacity: 0, scale: 0.92, y: 15 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.92, y: 15 }}
+            transition={{ type: 'spring', damping: 26, stiffness: 320 }}
             className="relative w-full max-w-4xl bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-white/10 flex flex-col my-auto max-h-[85vh]"
           >
             {/* Image Container */}
             <div className="relative w-full h-[380px] sm:h-[480px] lg:h-[540px] bg-black">
-              <ImageWrapper
-                src={currentImage.image}
-                alt={currentImage.title}
-                aspectRatio="auto"
-                rounded="none"
-                shadow={false}
-                className="w-full h-full"
-                imgClassName="object-contain w-full h-full"
-              />
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentImage.id}
+                  initial={{ opacity: 0, scale: 0.98 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="w-full h-full"
+                >
+                  <ImageWrapper
+                    src={currentImage.image}
+                    alt={currentImage.title}
+                    aspectRatio="auto"
+                    rounded="none"
+                    shadow={false}
+                    className="w-full h-full"
+                    imgClassName="object-contain w-full h-full"
+                  />
+                </motion.div>
+              </AnimatePresence>
             </div>
 
             {/* Bottom Details Caption */}
             <div className="p-5 sm:p-6 bg-slate-900 border-t border-white/10 text-left">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-400/30">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-400/30">
                   {currentImage.category}
                 </span>
               </div>

@@ -135,7 +135,7 @@ export const facilityData = {
     title: "Smart Digital Classrooms Spotlight",
     badge: "Featured Technology",
     description: "Our digital classrooms integrate cutting-edge 4K interactive touch panels, high-speed fiber internet, and cloud-based learning resources to make complex concepts intuitive, interactive, and memorable.",
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&q=80&w=1920",
     features: [
       "Interactive 4K Smart Boards",
       "High-Speed Fiber Connectivity",

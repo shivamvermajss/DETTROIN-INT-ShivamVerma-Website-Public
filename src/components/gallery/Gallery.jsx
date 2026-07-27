@@ -9,7 +9,6 @@ import GalleryHeader from './GalleryHeader';
 import GalleryFilter from './GalleryFilter';
 import GalleryGrid from './GalleryGrid';
 import GalleryLightbox from './GalleryLightbox';
-import GalleryCTA from './GalleryCTA';
 import { galleryData } from './GalleryData';
 
 const featureBannerVariants = {
@@ -26,7 +25,7 @@ const featureBannerVariants = {
 
 /**
  * Gallery Component
- * Phase 13 – Main section featuring interactive category filtering, 4-column masonry grid, full-screen accessible Lightbox modal, featured event spotlight, and visit CTAs.
+ * Phase 13 – Main section featuring interactive category filtering, 4-column masonry grid, full-screen accessible Lightbox modal, and featured event spotlight.
  */
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -66,7 +65,8 @@ const Gallery = () => {
 
   return (
     <section
-      className="relative py-16 sm:py-20 lg:py-28 bg-[#F8FAFC] overflow-hidden"
+      id="gallery"
+      className="relative py-12 sm:py-16 lg:py-20 bg-[#F8FAFC] overflow-hidden"
       aria-labelledby="gallery-heading"
     >
       {/* Background Ambient Mesh Glows */}
@@ -102,14 +102,15 @@ const Gallery = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center p-6 sm:p-8 lg:p-12">
             {/* Image Column */}
             <div className="lg:col-span-7 relative">
-              <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md">
+              <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md group">
                 <ImageWrapper
                   src={featuredBanner.image}
-                  alt={featuredBanner.title}
+                  alt="Students performing during the Annual Day celebration at Pavna International School"
                   aspectRatio="auto"
                   rounded="lg"
                   shadow={false}
-                  className="w-full h-[280px] sm:h-[360px] lg:h-[400px]"
+                  className="w-full h-[280px] sm:h-[360px] lg:h-[400px] overflow-hidden"
+                  imgClassName="group-hover:scale-105 transition-transform duration-500 ease-out object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none" />
               </div>
@@ -145,9 +146,6 @@ const Gallery = () => {
             </div>
           </div>
         </motion.div>
-
-        {/* Section CTA */}
-        <GalleryCTA />
 
         {/* Lightbox Modal Dialog */}
         <GalleryLightbox

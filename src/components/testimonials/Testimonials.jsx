@@ -5,9 +5,6 @@ import ImageWrapper from '../ui/image/ImageWrapper';
 import TestimonialsHeader from './TestimonialsHeader';
 import CommunityStats from './CommunityStats';
 import TestimonialsSlider from './TestimonialsSlider';
-import VideoTestimonialCard from './VideoTestimonialCard';
-import TrustBadges from './TrustBadges';
-import TestimonialsCTA from './TestimonialsCTA';
 import { testimonialsData } from './TestimonialsData';
 
 const storiesContainerVariants = {
@@ -35,14 +32,14 @@ const storyCardVariants = {
 
 /**
  * Testimonials Component
- * Phase 15 – Main section showcasing community voices, parent slider, student stories, video previews, trust badges, and CTAs.
+ * Main section showcasing Parents testimonials slider & Student journey stories.
  */
 const Testimonials = () => {
   const { studentStories } = testimonialsData;
 
   return (
     <section
-      className="relative py-16 sm:py-20 lg:py-28 bg-[#F8FAFC] overflow-hidden"
+      className="relative py-12 sm:py-16 lg:py-20 bg-white overflow-hidden"
       aria-labelledby="testimonials-heading"
     >
       {/* Background Soft Mesh Glow Accents */}
@@ -62,14 +59,14 @@ const Testimonials = () => {
         {/* Community Statistics */}
         <CommunityStats />
 
-        {/* Parent Testimonials Swiper Carousel */}
+        {/* Parent Testimonials Carousel */}
         <TestimonialsSlider />
 
-        {/* Student & Alumni Success Stories */}
-        <div className="my-16 lg:my-20">
+        {/* Student Journey Stories */}
+        <div className="mt-16 lg:mt-20">
           <div className="text-center mb-8">
             <h3 className="text-2xl sm:text-3xl font-extrabold text-[#123458] tracking-tight mb-2">
-              Student & Alumni Journey Stories
+              Student Journey Stories
             </h3>
             <p className="text-sm sm:text-base text-slate-600">
               Inspiring paths of leadership, sports excellence, and academic achievement.
@@ -129,15 +126,6 @@ const Testimonials = () => {
             })}
           </motion.div>
         </div>
-
-        {/* Video Testimonials Preview */}
-        <VideoTestimonialCard />
-
-        {/* Trust Badges */}
-        <TrustBadges />
-
-        {/* Section CTA */}
-        <TestimonialsCTA />
       </Container>
     </section>
   );

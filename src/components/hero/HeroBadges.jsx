@@ -11,17 +11,17 @@ const badges = [
 
 const HeroBadges = () => {
   return (
-    <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+    <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-3 pt-2 max-w-lg mx-auto lg:mx-0">
       {badges.map((b) => {
         const IconComponent = b.icon;
         return (
           <motion.div
             key={b.label}
             whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-md border border-slate-200/80 shadow-xs text-xs font-bold text-slate-700 select-none"
+            className="flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/90 shadow-2xs text-[11px] sm:text-xs font-bold text-slate-700 select-none shrink-0"
           >
-            <div className={`w-5 h-5 rounded-full flex items-center justify-center ${b.color}`}>
-              <IconComponent className="w-3.5 h-3.5" />
+            <div className={`w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center ${b.color}`}>
+              <IconComponent className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
             </div>
             <span>{b.label}</span>
           </motion.div>

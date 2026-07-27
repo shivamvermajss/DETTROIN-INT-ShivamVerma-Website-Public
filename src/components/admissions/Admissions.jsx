@@ -6,11 +6,10 @@ import EligibilitySection from './EligibilitySection';
 import RequiredDocuments from './RequiredDocuments';
 import ScholarshipCard from './ScholarshipCard';
 import AdmissionFAQPreview from './AdmissionFAQPreview';
-import AdmissionCTA from './AdmissionCTA';
 
 /**
  * Admissions Component
- * Phase 14 – Main admissions section providing step-by-step timeline, eligibility guidelines, required documents, scholarship spotlight, FAQ preview, and CTAs.
+ * Phase 14 – Main admissions section providing step-by-step timeline, eligibility guidelines, required documents, scholarship spotlight, and FAQ preview.
  */
 const Admissions = () => {
   return (
@@ -46,9 +45,6 @@ const Admissions = () => {
 
         {/* Admission FAQ Accordion Preview */}
         <AdmissionFAQPreview />
-
-        {/* Section CTA */}
-        <AdmissionCTA />
       </Container>
     </section>
   );

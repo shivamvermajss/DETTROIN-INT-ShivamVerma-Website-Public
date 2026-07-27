@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import { Check, ArrowRight } from 'lucide-react';
 
 /**
@@ -8,7 +8,7 @@ import { Check, ArrowRight } from 'lucide-react';
  * Displays an individual academic program card (Pre-Primary to Senior Secondary).
  */
 const ProgramCard = ({ program, cardVariants }) => {
-  const { id, name, range, description, icon: Icon, gradient, badgeColor, features, link } = program;
+  const { id, name, range, description, icon: Icon, gradient, badgeColor, features } = program;
   const titleId = `academic-card-${id}`;
 
   return (
@@ -64,14 +64,18 @@ const ProgramCard = ({ program, cardVariants }) => {
 
       {/* Learn More Action Button */}
       <div className="pt-2 border-t border-slate-100/80">
-        <Link
-          to={link}
-          className="inline-flex items-center gap-2 text-xs font-bold text-[#123458] group-hover:text-blue-600 hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-1 rounded-md py-1"
+        <ScrollLink
+          to="apply"
+          spy={true}
+          smooth={true}
+          offset={-80}
+          duration={500}
+          className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#123458] group-hover:text-blue-600 hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-1 rounded-md py-1 cursor-pointer"
           aria-label={`Learn more about ${name} program`}
         >
-          <span>Learn More</span>
-          <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" aria-hidden="true" />
-        </Link>
+          <span>Learn More & Apply</span>
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" aria-hidden="true" />
+        </ScrollLink>
       </div>
 
       <span className="sr-only">

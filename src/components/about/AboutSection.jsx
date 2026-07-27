@@ -10,6 +10,7 @@ import AboutContent from './AboutContent';
 const AboutSection = () => {
   return (
     <section
+      id="about"
       className="relative py-16 sm:py-20 lg:py-28 bg-white overflow-hidden"
       aria-labelledby="about-heading"
     >

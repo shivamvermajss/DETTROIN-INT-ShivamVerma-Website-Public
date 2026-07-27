@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import MissionVision from './MissionVision';
-import SchoolValues from './SchoolValues';
 import AboutFeatures from './AboutFeatures';
 import AboutCTA from './AboutCTA';
 import { aboutData } from './AboutData';
@@ -31,7 +30,7 @@ const itemVariants = {
 
 /**
  * AboutContent Component
- * Renders the right-column informational content: section badge, h2 heading, 3 paragraphs, Mission/Vision, Values, Highlights, and CTA.
+ * Renders the right-column informational content: section badge, heading, paragraphs, Mission & Vision, 6 feature cards, and single CTA.
  */
 const AboutContent = () => {
   const { badge, heading, paragraphs } = aboutData;
@@ -60,7 +59,7 @@ const AboutContent = () => {
         {heading}
       </motion.h2>
 
-      {/* Introduction Paragraphs (Max 3) */}
+      {/* Introduction Paragraphs */}
       <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
         {paragraphs.map((p, idx) => (
           <motion.p key={idx} variants={itemVariants}>
@@ -74,17 +73,12 @@ const AboutContent = () => {
         <MissionVision />
       </motion.div>
 
-      {/* Core Institutional Values */}
-      <motion.div variants={itemVariants}>
-        <SchoolValues />
-      </motion.div>
-
-      {/* Key Highlights */}
+      {/* 6 Feature Cards */}
       <motion.div variants={itemVariants}>
         <AboutFeatures />
       </motion.div>
 
-      {/* CTA Button */}
+      {/* Single CTA Button */}
       <motion.div variants={itemVariants}>
         <AboutCTA />
       </motion.div>

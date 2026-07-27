@@ -40,21 +40,26 @@ const Button = ({
 
   return (
     <motion.button
-      whileHover={!isDisabled && !isLoading ? { y: -2 } : {}}
+      whileHover={!isDisabled && !isLoading ? { y: -2, scale: 1.01 } : {}}
       whileTap={!isDisabled && !isLoading ? { scale: 0.97 } : {}}
+      transition={{ type: 'spring', stiffness: 400, damping: 25 }}
       type={type}
       onClick={onClick}
       disabled={isDisabled || isLoading}
-      className={cn(baseStyles, variantStyles[variant], sizeStyles[size], className)}
+      className={cn('group', baseStyles, variantStyles[variant], sizeStyles[size], className)}
       {...props}
     >
       {isLoading ? (
         <Loader2 className="w-4 h-4 animate-spin shrink-0" />
       ) : (
         <>
-          {Icon && iconPosition === 'left' && <Icon className="w-4 h-4 shrink-0" />}
+          {Icon && iconPosition === 'left' && (
+            <Icon className="w-4 h-4 shrink-0 group-hover:-translate-x-1 transition-transform duration-300" aria-hidden="true" />
+          )}
           <span>{children}</span>
-          {Icon && iconPosition === 'right' && <Icon className="w-4 h-4 shrink-0" />}
+          {Icon && iconPosition === 'right' && (
+            <Icon className="w-4 h-4 shrink-0 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
+          )}
         </>
       )}
     </motion.button>

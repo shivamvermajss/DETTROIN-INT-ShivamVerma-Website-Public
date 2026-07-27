@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { cn } from '../../../utils/cn';
+
+const DEFAULT_FALLBACK = "https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&q=80&w=1200";
 
 /**
  * Reusable Image Wrapper Component
- * Supports lazy loading, aspect ratio presets, rounded corners, and gradient overlays.
+ * Supports lazy loading, aspect ratio presets, rounded corners, gradient overlays, and automatic onError fallback.
  */
 const ImageWrapper = ({
   src,
@@ -17,6 +19,22 @@ const ImageWrapper = ({
   ...props
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [imgSrc, setImgSrc] = useState(src || DEFAULT_FALLBACK);
+  const [hasError, setHasError] = useState(false);
+
+  useEffect(() => {
+    setImgSrc(src || DEFAULT_FALLBACK);
+    setHasError(false);
+    setIsLoaded(false);
+  }, [src]);
+
+  const handleError = () => {
+    if (!hasError) {
+      setHasError(true);
+      setImgSrc(DEFAULT_FALLBACK);
+      setIsLoaded(true);
+    }
+  };
 
   const aspectMap = {
     auto: 'aspect-auto',
@@ -51,10 +69,12 @@ const ImageWrapper = ({
       )}
 
       <img
-        src={src}
-        alt={alt || 'Pavna School'}
+        src={imgSrc}
+        alt={alt || 'Pavna International School'}
         loading="lazy"
+        decoding="async"
         onLoad={() => setIsLoaded(true)}
+        onError={handleError}
         className={cn(
           'w-full h-full object-cover transition-opacity duration-500',
           isLoaded ? 'opacity-100' : 'opacity-0',

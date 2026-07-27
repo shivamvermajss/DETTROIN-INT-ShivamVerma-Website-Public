@@ -1,9 +1,29 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const NavLogo = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogoClick = (e) => {
+    if (location.pathname !== '/') {
+      e?.preventDefault();
+      navigate('/');
+    }
+  };
+
   return (
-    <Link to="/" className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#2563EB] rounded-xl p-1 transition-all">
+    <ScrollLink
+      to="home"
+      spy={true}
+      smooth={true}
+      offset={-80}
+      duration={500}
+      onClick={handleLogoClick}
+      className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#2563EB] rounded-xl p-1 transition-all cursor-pointer"
+      aria-label="Pavna International School Homepage"
+    >
       {/* Brand Icon Badge */}
       <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-[#123458] text-white flex items-center justify-center font-extrabold text-xl shadow-md group-hover:scale-105 group-hover:bg-[#2563EB] transition-all duration-300">
         P
@@ -18,7 +38,7 @@ const NavLogo = () => {
           International School
         </span>
       </div>
-    </Link>
+    </ScrollLink>
   );
 };
 

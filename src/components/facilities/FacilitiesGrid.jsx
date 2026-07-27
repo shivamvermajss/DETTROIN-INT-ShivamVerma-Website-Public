@@ -41,12 +41,13 @@ const FacilitiesGrid = ({ onOpenModal }) => {
       viewport={{ once: true, margin: '-50px' }}
       className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16 lg:mb-20"
     >
-      {facilities.map((facility) => (
+      {facilities.map((facility, idx) => (
         <FacilityCard
           key={facility.id}
           facility={facility}
           cardVariants={cardVariants}
           onOpenModal={onOpenModal}
+          isFeatured={idx === 0}
         />
       ))}
     </motion.div>

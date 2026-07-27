@@ -4,7 +4,7 @@ import PageWrapper from '../../components/layout/PageWrapper';
 import Section from '../../components/ui/section/Section';
 import Heading from '../../components/ui/typography/Heading';
 import Button from '../../components/ui/buttons/Button';
-import { Home, ArrowLeft } from 'lucide-react';
+import { Home } from 'lucide-react';
 
 const NotFoundPage = () => {
   return (

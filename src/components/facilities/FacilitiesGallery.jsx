@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import { Check, ArrowRight } from 'lucide-react';
 import ImageWrapper from '../ui/image/ImageWrapper';
 import Button from '../ui/buttons/Button';
@@ -24,7 +24,7 @@ const featureContainerVariants = {
  */
 const FacilitiesGallery = () => {
   const { featuredFacility } = facilityData;
-  const { title, badge, description, image, features, ctaText, ctaLink } = featuredFacility;
+  const { title, badge, description, image, features, ctaText } = featuredFacility;
 
   return (
     <motion.div
@@ -37,14 +37,15 @@ const FacilitiesGallery = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center p-6 sm:p-8 lg:p-12">
         {/* Left Column: Featured Image Collage (6 Cols) */}
         <div className="lg:col-span-6 relative">
-          <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md">
+          <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md group">
             <ImageWrapper
               src={image}
-              alt={title}
+              alt="Students learning in a modern smart classroom at Pavna International School"
               aspectRatio="auto"
               rounded="lg"
               shadow={false}
-              className="w-full h-[280px] sm:h-[360px] lg:h-[400px]"
+              className="w-full h-[280px] sm:h-[360px] lg:h-[400px] overflow-hidden"
+              imgClassName="group-hover:scale-105 transition-transform duration-500 ease-out object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none" />
           </div>
@@ -78,7 +79,7 @@ const FacilitiesGallery = () => {
 
           {/* CTA Action */}
           <div>
-            <Link to={ctaLink} className="focus:outline-none">
+            <ScrollLink to="apply" spy={true} smooth={true} offset={-80} duration={500} className="cursor-pointer inline-block">
               <Button
                 variant="primary"
                 size="md"
@@ -88,7 +89,7 @@ const FacilitiesGallery = () => {
               >
                 {ctaText}
               </Button>
-            </Link>
+            </ScrollLink>
           </div>
         </div>
       </div>

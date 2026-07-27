@@ -20,7 +20,7 @@ export const galleryData = {
   featuredBanner: {
     title: "Annual Day Celebration & Grand Cultural Fest",
     description: "A spectacular showcase of student talent in music, classical dance, theatrical drama, and athletic honors attended by distinguished dignitaries.",
-    image: "https://images.unsplash.com/photo-1469488865564-c2de10f69f96?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1920",
     badgeText: "Featured Event Spotlight",
     category: "Events"
   },
@@ -132,10 +132,10 @@ export const galleryData = {
     },
     {
       id: "g-16",
-      title: "Indoor Air-Conditioned Shooting Range",
+      title: "State-of-the-Art Sports Arena & Shooting Complex",
       category: "Sports",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800",
-      description: "Precision target shooting training under certified national level coaches."
+      image: "https://images.unsplash.com/photo-1571008887538-b36bb32f4571?auto=format&fit=crop&q=80&w=1200",
+      description: "Precision sports training and multi-sport indoor arena under certified national coaches."
     },
     {
       id: "g-17",

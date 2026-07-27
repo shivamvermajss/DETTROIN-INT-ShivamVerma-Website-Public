@@ -30,8 +30,8 @@ const Navbar = () => {
         className={cn(
           'sticky top-0 z-50 w-full transition-all duration-300',
           isScrolled
-            ? 'bg-white/90 backdrop-blur-xl border-b border-slate-200/80 shadow-sm py-3'
-            : 'bg-white/95 backdrop-blur-md border-b border-slate-100 py-4'
+            ? 'bg-white/90 backdrop-blur-xl border-b border-slate-200/80 shadow-sm py-2 sm:py-3'
+            : 'bg-white/95 backdrop-blur-md border-b border-slate-100 py-2.5 sm:py-4'
         )}
       >
         <Container>

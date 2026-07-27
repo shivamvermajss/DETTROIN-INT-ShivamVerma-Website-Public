@@ -1,11 +1,12 @@
 import React from 'react';
 import SEOHead from '../../components/common/SEOHead';
+import CampusFacilities from '../../components/facilities/CampusFacilities';
 
 const InfrastructurePage = () => {
   return (
-    <div className="py-12 bg-white rounded-2xl p-6 text-center border border-slate-200">
+    <div>
       <SEOHead title="Infrastructure | Pavna International School" description="Campus infrastructure at Pavna International School Aligarh" />
-      <h2>Infrastructure Page — Placeholder</h2>
+      <CampusFacilities />
     </div>
   );
 };

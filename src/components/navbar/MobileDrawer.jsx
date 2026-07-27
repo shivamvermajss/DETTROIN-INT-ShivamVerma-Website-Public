@@ -1,28 +1,32 @@
 import React, { useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Phone, ShieldCheck } from 'lucide-react';
 import CTAButton from './CTAButton';
 import { SCHOOL_INFO } from '../../constants/siteConstants';
-import { cn } from '../../utils/cn';
 
 const drawerItems = [
-  { label: 'Home', path: '/' },
-  { label: 'About', path: '/about' },
-  { label: 'Academics', path: '/academics' },
-  { label: 'Facilities', path: '/infrastructure' },
-  { label: 'Gallery', path: '/gallery' },
-  { label: 'Admissions', path: '/admissions' },
-  { label: 'Contact', path: '/contact' },
+  { label: 'Home', target: 'home' },
+  { label: 'About', target: 'about' },
+  { label: 'Academics', target: 'academics' },
+  { label: 'Facilities', target: 'facilities' },
+  { label: 'Gallery', target: 'gallery' },
+  { label: 'FAQ', target: 'faq' },
+  { label: 'Contact', target: 'contact' },
 ];
 
 const MobileDrawer = ({ isOpen, onClose }) => {
   const location = useLocation();
+  const navigate = useNavigate();
 
-  // Close drawer on route change
-  useEffect(() => {
-    if (isOpen) onClose();
-  }, [location.pathname]);
+  const handleLinkClick = (target, e) => {
+    onClose();
+    if (location.pathname !== '/') {
+      e?.preventDefault();
+      navigate(`/#${target}`);
+    }
+  };
 
   // Handle Escape key press
   useEffect(() => {
@@ -103,22 +107,20 @@ const MobileDrawer = ({ isOpen, onClose }) => {
             {/* Navigation Links List */}
             <nav className="p-5 flex-grow space-y-1.5" aria-label="Mobile Navigation">
               {drawerItems.map((item) => (
-                <NavLink
-                  key={item.path}
-                  to={item.path}
-                  end={item.path === '/'}
-                  onClick={onClose}
-                  className={({ isActive }) =>
-                    cn(
-                      'block px-4 py-3 rounded-2xl text-base font-bold transition-all duration-200',
-                      isActive
-                        ? 'bg-[#123458] text-white shadow-md'
-                        : 'text-slate-800 hover:bg-slate-100 hover:text-[#123458]'
-                    )
-                  }
+                <ScrollLink
+                  key={item.target}
+                  to={item.target}
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                  duration={500}
+                  activeClass="bg-[#123458] text-white shadow-md font-bold"
+                  onClick={(e) => handleLinkClick(item.target, e)}
+                  className="block px-4 py-3 rounded-2xl text-base font-bold text-slate-800 hover:bg-slate-100 hover:text-[#123458] transition-all duration-200 cursor-pointer"
+                  aria-label={`Navigate to ${item.label} section`}
                 >
                   {item.label}
-                </NavLink>
+                </ScrollLink>
               ))}
             </nav>
 

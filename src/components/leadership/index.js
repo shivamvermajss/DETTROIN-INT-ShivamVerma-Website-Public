@@ -5,6 +5,5 @@ export { default as ChairmanCard } from './ChairmanCard';
 export { default as PrincipalCard } from './PrincipalCard';
 export { default as QuoteCard } from './QuoteCard';
 export { default as LeadershipHighlights } from './LeadershipHighlights';
-export { default as LeadershipCTA } from './LeadershipCTA';
 export { leadershipData } from './LeadershipData';
 export { default } from './Leadership';

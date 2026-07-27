@@ -5,11 +5,10 @@ import AchievementStats from './AchievementStats';
 import AchievementGrid from './AchievementGrid';
 import AchievementTimeline from './AchievementTimeline';
 import SuccessStoryCard from './SuccessStoryCard';
-import AchievementCTA from './AchievementCTA';
 
 /**
  * Achievements Component
- * Phase 11 – Main section displaying animated statistics, 6 achievement cards, milestone timeline, student success story spotlight, and CTAs.
+ * Phase 11 – Main section displaying animated statistics, 6 achievement cards, milestone timeline, and student success story spotlight.
  */
 const Achievements = () => {
   return (
@@ -38,9 +37,6 @@ const Achievements = () => {
 
         {/* Featured Student Success Story */}
         <SuccessStoryCard />
-
-        {/* Section CTA */}
-        <AchievementCTA />
       </Container>
     </section>
   );

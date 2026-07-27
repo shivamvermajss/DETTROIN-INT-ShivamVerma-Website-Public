@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Maximize2 } from 'lucide-react';
+import { Eye } from 'lucide-react';
 import ImageWrapper from '../ui/image/ImageWrapper';
 
 /**
  * GalleryCard Component
- * Individual gallery item card featuring image zoom, dark gradient overlay, category tag, and Lightbox trigger.
+ * Individual gallery item card featuring smooth image zoom, dark gradient overlay, animated title from bottom, category badge, and view icon.
  */
 const GalleryCard = ({ item, index, cardVariants, onOpenLightbox }) => {
   const { id, title, category, image } = item;
@@ -28,7 +28,7 @@ const GalleryCard = ({ item, index, cardVariants, onOpenLightbox }) => {
           onOpenLightbox(index);
         }
       }}
-      className="group relative rounded-2xl overflow-hidden bg-slate-100 border border-slate-200/80 shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-blue-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+      className="group relative rounded-2xl overflow-hidden bg-slate-100 border border-slate-200/80 shadow-xs transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl hover:border-blue-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
     >
       <ImageWrapper
         src={image}
@@ -36,23 +36,24 @@ const GalleryCard = ({ item, index, cardVariants, onOpenLightbox }) => {
         aspectRatio="auto"
         rounded="none"
         shadow={false}
-        className="w-full h-56 sm:h-64 lg:h-72"
-        imgClassName="group-hover:scale-105 transition-transform duration-500"
+        className="w-full h-56 sm:h-64 lg:h-72 overflow-hidden"
+        imgClassName="group-hover:scale-110 transition-transform duration-700 ease-out object-cover"
       />
 
       {/* Dark Hover Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 text-left pointer-events-none">
-        {/* Top Right Expand Icon Badge */}
-        <div className="self-end w-9 h-9 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center border border-white/30 group-hover:scale-110 transition-transform">
-          <Maximize2 className="w-4 h-4" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 text-left pointer-events-none z-10">
+        {/* Top Right View Icon Badge */}
+        <div className="self-end inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-bold border border-white/30 group-hover:scale-105 transition-transform duration-300">
+          <Eye className="w-4 h-4 text-blue-300" aria-hidden="true" />
+          <span>View</span>
         </div>
 
-        {/* Bottom Details */}
-        <div>
-          <span className="inline-block text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-blue-600 text-white mb-1 shadow-xs">
+        {/* Bottom Details Animated From Bottom */}
+        <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 ease-out">
+          <span className="inline-block text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#2563EB] text-white mb-1.5 shadow-xs">
             {category}
           </span>
-          <h3 id={titleId} className="text-sm sm:text-base font-bold text-white leading-tight">
+          <h3 id={titleId} className="text-sm sm:text-base font-extrabold text-white leading-tight tracking-tight">
             {title}
           </h3>
         </div>

@@ -5,6 +5,5 @@ export { default as AchievementGrid } from './AchievementGrid';
 export { default as AchievementCard } from './AchievementCard';
 export { default as AchievementTimeline } from './AchievementTimeline';
 export { default as SuccessStoryCard } from './SuccessStoryCard';
-export { default as AchievementCTA } from './AchievementCTA';
 export { achievementData } from './AchievementData';
 export { default } from './Achievements';

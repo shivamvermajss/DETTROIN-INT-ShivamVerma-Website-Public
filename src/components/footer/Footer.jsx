@@ -10,7 +10,7 @@ import BackToTop from './BackToTop';
  */
 const Footer = () => {
   return (
-    <footer className="relative bg-[#0A192F] text-slate-200 overflow-hidden" role="contentinfo">
+    <footer id="contact" className="relative bg-[#0A192F] text-slate-200 overflow-hidden" role="contentinfo">
       {/* Background Soft Glow Accents */}
       <div
         className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/3"

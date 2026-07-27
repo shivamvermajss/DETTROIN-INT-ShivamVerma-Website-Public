@@ -6,6 +6,5 @@ export { default as EligibilitySection } from './EligibilitySection';
 export { default as RequiredDocuments } from './RequiredDocuments';
 export { default as ScholarshipCard } from './ScholarshipCard';
 export { default as AdmissionFAQPreview } from './AdmissionFAQPreview';
-export { default as AdmissionCTA } from './AdmissionCTA';
 export { admissionData } from './AdmissionData';
 export { default } from './Admissions';

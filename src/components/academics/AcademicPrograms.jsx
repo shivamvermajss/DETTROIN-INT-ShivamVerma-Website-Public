@@ -4,7 +4,6 @@ import Container from '../ui/container/Container';
 import ProgramGrid from './ProgramGrid';
 import CurriculumTimeline from './CurriculumTimeline';
 import ProgramHighlights from './ProgramHighlights';
-import AcademicCTA from './AcademicCTA';
 import { academicData } from './AcademicData';
 
 const headerContainerVariants = {
@@ -32,14 +31,15 @@ const itemVariants = {
 
 /**
  * AcademicPrograms Component
- * Phase 8 – Main component showcasing Pavna School's 5 academic stages, progression timeline, highlights, and CTAs.
+ * Phase 8 – Main component showcasing Pavna School's 5 academic stages, progression timeline, and highlights.
  */
 const AcademicPrograms = () => {
   const { badge, heading, description } = academicData;
 
   return (
     <section
-      className="relative py-16 sm:py-20 lg:py-28 bg-white overflow-hidden"
+      id="academics"
+      className="relative py-12 sm:py-16 lg:py-20 bg-[#F6F9FF] overflow-hidden"
       aria-labelledby="academics-heading"
     >
       {/* Background Soft Mesh Ambient Accents */}
@@ -94,9 +94,6 @@ const AcademicPrograms = () => {
 
         {/* Academic Highlights */}
         <ProgramHighlights />
-
-        {/* Call to Action */}
-        <AcademicCTA />
       </Container>
     </section>
   );

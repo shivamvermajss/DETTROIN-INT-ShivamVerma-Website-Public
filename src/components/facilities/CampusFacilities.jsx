@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import Container from '../ui/container/Container';
 import FacilitiesGrid from './FacilitiesGrid';
 import FacilitiesGallery from './FacilitiesGallery';
-import FacilitiesCTA from './FacilitiesCTA';
 import FacilityModal from './FacilityModal';
 import { facilityData } from './FacilityData';
 
@@ -32,7 +31,7 @@ const itemVariants = {
 
 /**
  * CampusFacilities Component
- * Phase 9 – Main component showcasing 8 campus facility cards, modal details, featured technology spotlight, and visit CTAs.
+ * Phase 9 – Main component showcasing 8 campus facility cards, modal details, and featured technology spotlight.
  */
 const CampusFacilities = () => {
   const { badge, heading, description } = facilityData;
@@ -52,7 +51,8 @@ const CampusFacilities = () => {
 
   return (
     <section
-      className="relative py-16 sm:py-20 lg:py-28 bg-[#F8FAFC] overflow-hidden"
+      id="facilities"
+      className="relative py-12 sm:py-16 lg:py-20 bg-white overflow-hidden"
       aria-labelledby="facilities-heading"
     >
       {/* Background Soft Mesh Ambient Accents */}
@@ -100,9 +100,6 @@ const CampusFacilities = () => {
 
         {/* Featured Facility Spotlight */}
         <FacilitiesGallery />
-
-        {/* Schedule Visit CTA */}
-        <FacilitiesCTA />
 
         {/* Interactive Facility Detail Modal */}
         <FacilityModal

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import { Send, Calendar, Download, CheckCircle2 } from 'lucide-react';
 import Container from '../ui/container/Container';
 import Button from '../ui/buttons/Button';
@@ -24,10 +24,10 @@ const bannerVariants = {
  */
 const FinalCTA = () => {
   const { finalCTA } = footerData;
-  const { heading, description, primaryText, primaryPath, secondaryText, secondaryPath, tertiaryText, tertiaryPath, trustIndicators } = finalCTA;
+  const { heading, description, primaryText, secondaryText, tertiaryText, trustIndicators } = finalCTA;
 
   return (
-    <section className="relative py-12 lg:py-16 bg-white" aria-label="Final Admission Call to Action">
+    <section id="apply" className="relative py-12 lg:py-16 bg-white" aria-label="Final Admission Call to Action">
       <Container maxWidth="max-w-7xl">
         <motion.div
           variants={bannerVariants}
@@ -59,44 +59,44 @@ const FinalCTA = () => {
 
             {/* CTA Action Buttons */}
             <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
-              <Link to={primaryPath} className="focus:outline-none">
+              <ScrollLink to="contact" spy={true} smooth={true} offset={-80} duration={500} className="cursor-pointer">
                 <Button
                   variant="primary"
                   size="lg"
                   icon={Send}
                   iconPosition="left"
-                  className="!rounded-full shadow-lg hover:shadow-blue-500/25"
+                  className="!rounded-full shadow-lg hover:shadow-blue-500/25 cursor-pointer"
                   aria-label="Apply for Admission at Pavna School"
                 >
                   {primaryText}
                 </Button>
-              </Link>
+              </ScrollLink>
 
-              <Link to={secondaryPath} className="focus:outline-none">
+              <ScrollLink to="contact" spy={true} smooth={true} offset={-80} duration={500} className="cursor-pointer">
                 <Button
                   variant="secondary"
                   size="lg"
                   icon={Calendar}
                   iconPosition="left"
-                  className="!rounded-full shadow-lg"
+                  className="!rounded-full shadow-lg cursor-pointer"
                   aria-label="Schedule a Campus Visit at Pavna School"
                 >
                   {secondaryText}
                 </Button>
-              </Link>
+              </ScrollLink>
 
-              <Link to={tertiaryPath} className="focus:outline-none">
+              <ScrollLink to="contact" spy={true} smooth={true} offset={-80} duration={500} className="cursor-pointer">
                 <Button
                   variant="outline"
                   size="lg"
                   icon={Download}
                   iconPosition="left"
-                  className="!rounded-full text-white border-white/40 hover:bg-white/10 hover:border-white"
-                  aria-label="Download Pavna School Brochure"
+                  className="!rounded-full text-white border-white/40 hover:bg-white/10 hover:border-white cursor-pointer"
+                  aria-label="Contact Us to Download Pavna School Brochure"
                 >
                   {tertiaryText}
                 </Button>
-              </Link>
+              </ScrollLink>
             </div>
 
             {/* Trust Badges Bar */}
