@@ -5,6 +5,7 @@ import { Statistics } from '../../components/statistics';
 import { AboutSection } from '../../components/about';
 import { WhyChooseUs } from '../../components/whyChooseUs';
 import { AcademicPrograms } from '../../components/academics';
+import { CampusFacilities } from '../../components/facilities';
 
 const HomePage = () => {
   return (
@@ -17,6 +18,7 @@ const HomePage = () => {
       <AboutSection />
       <WhyChooseUs />
       <AcademicPrograms />
+      <CampusFacilities />
     </PageWrapper>
   );
 };
