@@ -25,7 +25,7 @@ Developed as part of the <strong>Dettroin Full Stack Developer Internship Techni
 | Field | Details |
 |-------|---------|
 | **Full Name** | Shivam Verma |
-| **Intern ID** | **YOUR INTERN ID HERE** |
+| **Intern ID** ||
 | **Email Address** | shivamvermacse2026@gmail.com |
 | **GitHub Username** | shivamvermajss |
 | **Selected Website** | Pavna International School |
