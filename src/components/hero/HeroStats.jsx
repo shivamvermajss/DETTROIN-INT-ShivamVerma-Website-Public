@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Users, Trophy, Bus } from 'lucide-react';
+import { Award, Users, Trophy } from 'lucide-react';
 
 const floatingStats = [
   {

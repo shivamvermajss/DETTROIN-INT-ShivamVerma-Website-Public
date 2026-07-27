@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Sparkles, Phone, ShieldCheck } from 'lucide-react';
+import { X, Phone, ShieldCheck } from 'lucide-react';
 import CTAButton from './CTAButton';
 import { SCHOOL_INFO } from '../../constants/siteConstants';
 import { cn } from '../../utils/cn';

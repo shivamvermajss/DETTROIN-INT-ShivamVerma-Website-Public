@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SCHOOL_INFO } from '../../constants/siteConstants';
 
-const NavLogo = ({ isScrolled = false }) => {
+const NavLogo = () => {
   return (
     <Link to="/" className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#2563EB] rounded-xl p-1 transition-all">
       {/* Brand Icon Badge */}
