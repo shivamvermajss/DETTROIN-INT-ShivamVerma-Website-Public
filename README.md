@@ -1,62 +1,102 @@
 # 🎓 Pavna International School – Modern School Website Redesign
 
+<p align="center">
+
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
 ![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?logo=tailwind-css)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-v12-black)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
-A modern, responsive, and accessible redesign of the **Pavna International School** website built using **React**, **Vite**, **Tailwind CSS**, and **Framer Motion**.
+</p>
 
-This project was developed as part of a frontend development assignment, focusing on clean UI/UX, responsive design, accessibility, and performance while preserving the institution's identity.
+<p align="center">
+A modern, responsive, and accessible redesign of <strong>Pavna International School</strong> built with React, Vite, Tailwind CSS, and Framer Motion.
+</p>
+
+<p align="center">
+Designed as a frontend development assignment with a strong focus on UI/UX, responsiveness, accessibility, smooth animations, and performance.
+</p>
 
 ---
 
-## 🔗 Live Demo
+## 🌐 Live Demo
 
-**Website:** https://dettroin-int-shivam-verma-website-p.vercel.app/
+👉 **Website:**  
+https://dettroin-int-shivam-verma-website-p.vercel.app/
 
 ---
 
-## 📸 Preview
+# 📸 Project Preview
 
-> Add 2–4 screenshots here.
+<table>
+<tr>
 
-```
-assets/
-├── homepage.png
-├── academics.png
-├── gallery.png
-└── mobile-view.png
-```
+<td width="50%">
+
+### 🏠 Homepage
+
+<img src="./screenshots/homepage.png" width="100%" />
+
+</td>
+
+<td width="50%">
+
+### 🎓 Academics
+
+<img src="./screenshots/academics.png" width="100%" />
+
+</td>
+
+</tr>
+
+<tr>
+
+<td width="50%">
+
+### 🏫 Campus Facilities
+
+<img src="./screenshots/facilities.png" width="100%" />
+
+</td>
+
+<td width="50%">
+
+### 🖼️ Gallery
+
+<img src="./screenshots/gallery.png" width="100%" />
+
+</td>
+
+</tr>
+</table>
 
 ---
 
 # ✨ Features
 
-- Modern responsive UI
-- Mobile-first design
-- Smooth scrolling navigation
-- Interactive Hero section
-- Animated statistics
-- Academic programs
-- Campus facilities
-- Student life showcase
-- Image gallery
-- Parent testimonials
-- FAQ section
-- Contact & admissions CTA
-- Scroll-to-top button
-- Framer Motion animations
-- SEO-friendly structure
-- Accessible components
+- 🎨 Modern UI inspired by premium educational websites
+- 📱 Fully responsive (Mobile • Tablet • Desktop)
+- ⚡ Built using React + Vite
+- 🎭 Smooth animations with Framer Motion
+- 🎯 Interactive Hero section
+- 📊 Animated statistics
+- 🏫 Academic Programs
+- 🧪 Campus Facilities
+- 📸 Interactive Gallery
+- 💬 Parent Testimonials
+- ❓ Searchable FAQ
+- 📩 Admission Call-to-Action
+- ⬆️ Scroll-to-Top button
+- ♿ Accessibility-focused components
+- 🔍 SEO-friendly structure
 
 ---
 
 # 🛠 Tech Stack
 
 | Category | Technology |
-|----------|------------|
+|-----------|------------|
 | Frontend | React 19 |
 | Build Tool | Vite |
 | Styling | Tailwind CSS v4 |
@@ -71,38 +111,45 @@ assets/
 # 📁 Project Structure
 
 ```text
-src/
+src
 │
-├── assets/
-├── components/
-│   ├── Hero/
-│   ├── About/
-│   ├── Academics/
-│   ├── Facilities/
-│   ├── Gallery/
-│   ├── Testimonials/
-│   ├── FAQ/
-│   ├── Footer/
-│   └── UI/
+├── assets
+├── components
+│   ├── hero
+│   ├── about
+│   ├── academics
+│   ├── facilities
+│   ├── gallery
+│   ├── testimonials
+│   ├── faq
+│   ├── footer
+│   └── ui
 │
-├── pages/
-├── router/
-├── utils/
+├── pages
+├── router
+├── utils
+│
 ├── App.jsx
 └── main.jsx
+
+screenshots
+├── homepage.png
+├── academics.png
+├── facilities.png
+└── gallery.png
 ```
 
 ---
 
 # 🚀 Getting Started
 
-## Clone Repository
+## Clone the Repository
 
 ```bash
 git clone https://github.com/shivamvermajss/DETTROIN-INT-ShivamVerma-Website-Public.git
 ```
 
-## Navigate
+## Navigate to the Project
 
 ```bash
 cd DETTROIN-INT-ShivamVerma-Website-Public
@@ -114,7 +161,7 @@ cd DETTROIN-INT-ShivamVerma-Website-Public
 npm install
 ```
 
-## Run Development Server
+## Start Development Server
 
 ```bash
 npm run dev
@@ -130,13 +177,13 @@ http://localhost:5173
 
 # 📦 Production Build
 
-Create an optimized production build.
+Generate an optimized production build.
 
 ```bash
 npm run build
 ```
 
-Preview locally.
+Preview the production build locally.
 
 ```bash
 npm run preview
@@ -146,7 +193,7 @@ npm run preview
 
 # 🚀 Deployment
 
-The application is deployed on **Vercel**.
+The project is deployed on **Vercel**.
 
 ```bash
 npx vercel --prod
@@ -156,25 +203,26 @@ npx vercel --prod
 
 # 📱 Responsive Design
 
-Optimized for
+Optimized for:
 
-- Mobile
-- Tablet
-- Laptop
-- Desktop
+- ✅ Mobile
+- ✅ Tablet
+- ✅ Laptop
+- ✅ Desktop
 
 ---
 
 # ⚡ Performance
 
-The project is optimized for:
+The project emphasizes:
 
-- Fast page load
-- Lazy loaded images
-- Smooth animations
+- Fast loading experience
 - Responsive layouts
+- Lazy-loaded assets
+- Smooth animations
 - SEO-friendly metadata
-- Accessibility best practices
+- Accessible UI components
+- Clean component architecture
 
 ---
 
@@ -182,39 +230,42 @@ The project is optimized for:
 
 - Semantic HTML
 - Keyboard navigation
-- ARIA labels
+- ARIA attributes
 - Focus management
-- Color contrast compliance
+- Accessible color contrast
+- Responsive typography
 
 ---
 
-# 📌 Future Improvements
+# 🔮 Future Enhancements
 
-- CMS integration
-- Online admission portal
-- Student dashboard
-- Events management
-- News & announcements
-- Dark mode
+- Student Login Portal
+- Online Admission System
+- CMS Integration
+- Event Management
+- School News & Announcements
+- Dark Mode Support
 
 ---
 
 # 👨‍💻 Author
 
-**Shivam Verma**
+### Shivam Verma
 
-Full Stack Developer (MERN)
+**Full Stack Developer (MERN)**
 
-GitHub:
+📧 GitHub  
 https://github.com/shivamvermajss
 
-LinkedIn:
+💼 LinkedIn  
 https://www.linkedin.com/in/shivam-verma-227b37384/
 
 ---
 
 # 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
 
-This project was created for educational and portfolio purposes as part of a frontend redesign assignment.
+---
+
+## ⭐ If you found this project useful, consider giving it a Star on GitHub!
