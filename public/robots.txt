@@ -1,0 +1,10 @@
+# Robots.txt for Pavna International School
+User-agent: *
+Allow: /
+
+# Disallow administrative or temporary routes if any
+Disallow: /api/
+Disallow: /private/
+
+# Sitemap reference
+Sitemap: https://www.pavnaschool.com/sitemap.xml
