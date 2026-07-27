@@ -1,19 +1,15 @@
 import React from 'react';
-import SEOHead from '../../components/common/SEOHead';
-import HeroSection from '../../components/sections/hero/HeroSection';
-import AboutSection from '../../components/sections/about/AboutSection';
-import StatsSection from '../../components/sections/stats/StatsSection';
-import FAQSection from '../../components/sections/faq/FAQSection';
+import PageWrapper from '../../components/layout/PageWrapper';
+import { Hero } from '../../components/hero';
 
 const HomePage = () => {
   return (
-    <div className="space-y-8">
-      <SEOHead title="Home | Pavna International School" description="Welcome to Pavna International School Aligarh" />
-      <HeroSection />
-      <StatsSection />
-      <AboutSection />
-      <FAQSection />
-    </div>
+    <PageWrapper
+      title="Pavna International School | Leading CBSE Boarding & Day School in Aligarh"
+      description="Pavna International School, Aligarh (formerly DPS Aligarh), established in 1998, offers world-class CBSE education, AI & Robotics, SEEL framework, state-of-the-art sports facilities, and premium residential boarding."
+    >
+      <Hero />
+    </PageWrapper>
   );
 };
 
