@@ -12,6 +12,7 @@ import { StudentLife } from '../../components/studentLife';
 import { Gallery } from '../../components/gallery';
 import { Admissions } from '../../components/admissions';
 import { Testimonials } from '../../components/testimonials';
+import { FAQ } from '../../components/faq';
 
 const HomePage = () => {
   return (
@@ -31,6 +32,7 @@ const HomePage = () => {
       <Gallery />
       <Admissions />
       <Testimonials />
+      <FAQ />
     </PageWrapper>
   );
 };
