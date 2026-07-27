@@ -11,18 +11,33 @@
 </p>
 
 <p align="center">
-A modern, responsive, and accessible redesign of <strong>Pavna International School</strong> built with React, Vite, Tailwind CSS, and Framer Motion.
+A modern, responsive, and accessible redesign of <strong>Pavna International School</strong> built using React, Vite, Tailwind CSS, and Framer Motion.
 </p>
 
 <p align="center">
-Designed as a frontend development assignment with a strong focus on UI/UX, responsiveness, accessibility, smooth animations, and performance.
+Developed as part of the <strong>Dettroin Full Stack Developer Internship Technical Assessment</strong>, focusing on modern UI/UX, responsiveness, accessibility, smooth animations, and performance.
 </p>
 
 ---
 
-## 🌐 Live Demo
+# 👨‍💻 Candidate Information
 
-👉 **Website:**  
+| Field | Details |
+|-------|---------|
+| **Full Name** | Shivam Verma |
+| **Intern ID** | **YOUR INTERN ID HERE** |
+| **Email Address** | shivamvermacse2026@gmail.com |
+| **GitHub Username** | shivamvermajss |
+| **Selected Website** | Pavna International School |
+| **Repository** | https://github.com/shivamvermajss/DETTROIN-INT-ShivamVerma-Website-Public |
+| **Live Demo** | https://dettroin-int-shivam-verma-website-p.vercel.app/ |
+
+---
+
+# 🌐 Live Demo
+
+👉 **Website**
+
 https://dettroin-int-shivam-verma-website-p.vercel.app/
 
 ---
@@ -75,25 +90,47 @@ https://dettroin-int-shivam-verma-website-p.vercel.app/
 
 # ✨ Features
 
-- 🎨 Modern UI inspired by premium educational websites
-- 📱 Fully responsive (Mobile • Tablet • Desktop)
-- ⚡ Built using React + Vite
-- 🎭 Smooth animations with Framer Motion
-- 🎯 Interactive Hero section
-- 📊 Animated statistics
-- 🏫 Academic Programs
-- 🧪 Campus Facilities
+- 🎨 Modern and premium UI
+- 📱 Fully responsive across all devices
+- ⚡ Built with React + Vite
+- 🎭 Smooth Framer Motion animations
+- 🎯 Interactive Hero Section
+- 📊 Animated Statistics
+- 🎓 Academic Programs
+- 🏫 Campus Facilities
 - 📸 Interactive Gallery
 - 💬 Parent Testimonials
 - ❓ Searchable FAQ
-- 📩 Admission Call-to-Action
-- ⬆️ Scroll-to-Top button
-- ♿ Accessibility-focused components
+- 📩 Admission CTA
+- ⬆️ Scroll-to-Top Button
 - 🔍 SEO-friendly structure
+- ♿ Accessibility-focused design
 
 ---
 
-# 🛠 Tech Stack
+# 🚀 Key Improvements Made
+
+Compared to the original website, the following enhancements were implemented:
+
+- Complete UI redesign with a modern educational theme
+- Improved visual hierarchy and typography
+- Mobile-first responsive design
+- Smooth page animations using Framer Motion
+- Enhanced navigation with better user experience
+- Modern Hero section with engaging layout
+- Redesigned Academics section
+- Interactive Campus Facilities cards
+- Improved Gallery with responsive grid layout
+- Modern Testimonials section
+- Searchable FAQ
+- Improved spacing and component consistency
+- Better accessibility using semantic HTML and ARIA labels
+- Performance optimization with Vite
+- Cleaner project architecture using reusable React components
+
+---
+
+# 🛠 Technologies Used
 
 | Category | Technology |
 |-----------|------------|
@@ -143,13 +180,13 @@ screenshots
 
 # 🚀 Getting Started
 
-## Clone the Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/shivamvermajss/DETTROIN-INT-ShivamVerma-Website-Public.git
 ```
 
-## Navigate to the Project
+## Navigate
 
 ```bash
 cd DETTROIN-INT-ShivamVerma-Website-Public
@@ -161,7 +198,7 @@ cd DETTROIN-INT-ShivamVerma-Website-Public
 npm install
 ```
 
-## Start Development Server
+## Run Development Server
 
 ```bash
 npm run dev
@@ -177,13 +214,13 @@ http://localhost:5173
 
 # 📦 Production Build
 
-Generate an optimized production build.
+Build the application.
 
 ```bash
 npm run build
 ```
 
-Preview the production build locally.
+Preview production build.
 
 ```bash
 npm run preview
@@ -214,26 +251,25 @@ Optimized for:
 
 # ⚡ Performance
 
-The project emphasizes:
+The project focuses on:
 
-- Fast loading experience
-- Responsive layouts
+- Fast page loading
 - Lazy-loaded assets
 - Smooth animations
-- SEO-friendly metadata
-- Accessible UI components
-- Clean component architecture
+- SEO-friendly structure
+- Responsive layouts
+- Clean React component architecture
 
 ---
 
 # ♿ Accessibility
 
 - Semantic HTML
-- Keyboard navigation
-- ARIA attributes
-- Focus management
-- Accessible color contrast
-- Responsive typography
+- Keyboard Navigation
+- ARIA Labels
+- Focus Management
+- Accessible Color Contrast
+- Responsive Typography
 
 ---
 
@@ -243,21 +279,23 @@ The project emphasizes:
 - Online Admission System
 - CMS Integration
 - Event Management
-- School News & Announcements
-- Dark Mode Support
+- School News Section
+- Dark Mode
 
 ---
 
 # 👨‍💻 Author
 
-### Shivam Verma
+## Shivam Verma
 
 **Full Stack Developer (MERN)**
 
-📧 GitHub  
+**GitHub**
+
 https://github.com/shivamvermajss
 
-💼 LinkedIn  
+**LinkedIn**
+
 https://www.linkedin.com/in/shivam-verma-227b37384/
 
 ---
@@ -268,4 +306,4 @@ This project is licensed under the **MIT License**.
 
 ---
 
-## ⭐ If you found this project useful, consider giving it a Star on GitHub!
+⭐ **Developed as part of the Dettroin Full Stack Developer Internship Technical Assessment.**
