@@ -1,0 +1,12 @@
+export { default as FinalCTA } from './FinalCTA';
+export { default as Footer } from './Footer';
+export { default as FooterTop } from './FooterTop';
+export { default as FooterLinks } from './FooterLinks';
+export { default as FooterContact } from './FooterContact';
+export { default as FooterNewsletter } from './FooterNewsletter';
+export { default as FooterSocials } from './FooterSocials';
+export { default as CampusMapCard } from './CampusMapCard';
+export { default as BackToTop } from './BackToTop';
+export { default as FooterBottom } from './FooterBottom';
+export { footerData } from './FooterData';
+export { default } from './Footer';

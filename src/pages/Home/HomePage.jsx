@@ -13,6 +13,7 @@ import { Gallery } from '../../components/gallery';
 import { Admissions } from '../../components/admissions';
 import { Testimonials } from '../../components/testimonials';
 import { FAQ } from '../../components/faq';
+import { FinalCTA, Footer } from '../../components/footer';
 
 const HomePage = () => {
   return (
@@ -33,6 +34,8 @@ const HomePage = () => {
       <Admissions />
       <Testimonials />
       <FAQ />
+      <FinalCTA />
+      <Footer />
     </PageWrapper>
   );
 };
