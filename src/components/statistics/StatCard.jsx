@@ -1,7 +1,31 @@
-import React from 'react';
-import CountUp from 'react-countup';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef } from 'react';
+import { motion, useMotionValue, useTransform, animate, useInView } from 'framer-motion';
 import { Award } from 'lucide-react'; // Fallback icon
+
+/**
+ * Custom Framer Motion Counter
+ * Replaces react-countup to fix Vite ESM import bugs
+ */
+const AnimatedNumber = ({ end, duration = 2.5 }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const count = useMotionValue(0);
+  
+  // Format the number with commas (e.g., 30,000)
+  const rounded = useTransform(count, (latest) => Math.round(latest).toLocaleString());
+
+  useEffect(() => {
+    if (isInView) {
+      const controls = animate(count, end, { 
+        duration: duration,
+        ease: "easeOut"
+      });
+      return controls.stop;
+    }
+  }, [count, end, isInView, duration]);
+
+  return <motion.span ref={ref}>{rounded}</motion.span>;
+};
 
 /**
  * StatCard Component
@@ -35,6 +59,8 @@ const StatCard = ({ item = {}, cardVariants }) => {
     return <Award className={iconClasses} aria-hidden="true" />;
   };
 
+  const parsedNumber = typeof number === 'number' ? number : parseInt(number) || 0;
+
   return (
     <motion.div
       variants={cardVariants}
@@ -63,19 +89,8 @@ const StatCard = ({ item = {}, cardVariants }) => {
         {/* Animated Number */}
         <div className="mb-3">
           <div className="text-4xl sm:text-5xl font-extrabold text-[#123458] tracking-tight flex items-baseline gap-0.5">
-            <CountUp
-              start={0}
-              end={typeof number === 'number' ? number : parseInt(number) || 0}
-              duration={2.5}
-              separator=","
-              suffix={suffix || ''}
-              enableScrollSpy
-              scrollSpyOnce
-            >
-              {({ countUpRef }) => (
-                <span ref={countUpRef} />
-              )}
-            </CountUp>
+            <AnimatedNumber end={parsedNumber} />
+            {suffix && <span>{suffix}</span>}
           </div>
         </div>
 
