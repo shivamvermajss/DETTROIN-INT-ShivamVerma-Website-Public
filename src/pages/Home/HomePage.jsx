@@ -2,6 +2,7 @@ import React from 'react';
 import PageWrapper from '../../components/layout/PageWrapper';
 import { Hero } from '../../components/hero';
 import { Statistics } from '../../components/statistics';
+import { AboutSection } from '../../components/about';
 
 const HomePage = () => {
   return (
@@ -11,6 +12,7 @@ const HomePage = () => {
     >
       <Hero />
       <Statistics />
+      <AboutSection />
     </PageWrapper>
   );
 };
