@@ -3,6 +3,7 @@ import PageWrapper from '../../components/layout/PageWrapper';
 import { Hero } from '../../components/hero';
 import { Statistics } from '../../components/statistics';
 import { AboutSection } from '../../components/about';
+import { WhyChooseUs } from '../../components/whyChooseUs';
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
       <Hero />
       <Statistics />
       <AboutSection />
+      <WhyChooseUs />
     </PageWrapper>
   );
 };
