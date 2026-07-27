@@ -7,6 +7,7 @@ import { WhyChooseUs } from '../../components/whyChooseUs';
 import { AcademicPrograms } from '../../components/academics';
 import { CampusFacilities } from '../../components/facilities';
 import { Leadership } from '../../components/leadership';
+import { Achievements } from '../../components/achievements';
 
 const HomePage = () => {
   return (
@@ -21,6 +22,7 @@ const HomePage = () => {
       <AcademicPrograms />
       <CampusFacilities />
       <Leadership />
+      <Achievements />
     </PageWrapper>
   );
 };
