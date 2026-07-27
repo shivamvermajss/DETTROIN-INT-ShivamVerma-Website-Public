@@ -10,6 +10,7 @@ import { Leadership } from '../../components/leadership';
 import { Achievements } from '../../components/achievements';
 import { StudentLife } from '../../components/studentLife';
 import { Gallery } from '../../components/gallery';
+import { Admissions } from '../../components/admissions';
 
 const HomePage = () => {
   return (
@@ -27,6 +28,7 @@ const HomePage = () => {
       <Achievements />
       <StudentLife />
       <Gallery />
+      <Admissions />
     </PageWrapper>
   );
 };
