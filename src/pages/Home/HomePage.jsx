@@ -8,6 +8,7 @@ import { AcademicPrograms } from '../../components/academics';
 import { CampusFacilities } from '../../components/facilities';
 import { Leadership } from '../../components/leadership';
 import { Achievements } from '../../components/achievements';
+import { StudentLife } from '../../components/studentLife';
 
 const HomePage = () => {
   return (
@@ -23,6 +24,7 @@ const HomePage = () => {
       <CampusFacilities />
       <Leadership />
       <Achievements />
+      <StudentLife />
     </PageWrapper>
   );
 };
