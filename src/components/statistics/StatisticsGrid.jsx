@@ -29,7 +29,14 @@ const cardVariants = {
  * StatisticsGrid Component
  * Displays a responsive grid of StatCards with staggered Framer Motion entrance animations.
  */
-const StatisticsGrid = ({ stats }) => {
+const StatisticsGrid = ({ stats = [] }) => {
+  // Ensure stats is an array before mapping
+  const statsList = Array.isArray(stats) ? stats : [];
+
+  if (statsList.length === 0) {
+    return null;
+  }
+
   return (
     <motion.div
       variants={containerVariants}
@@ -38,8 +45,12 @@ const StatisticsGrid = ({ stats }) => {
       viewport={{ once: true, margin: '-50px' }}
       className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
     >
-      {stats.map((item) => (
-        <StatCard key={item.id} item={item} cardVariants={cardVariants} />
+      {statsList.map((item, index) => (
+        <StatCard 
+          key={item.id || item.title || index} 
+          item={item} 
+          cardVariants={cardVariants} 
+        />
       ))}
     </motion.div>
   );
