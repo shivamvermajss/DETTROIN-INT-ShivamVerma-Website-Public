@@ -7,8 +7,27 @@ import { motion } from 'framer-motion';
  * Renders an individual stat card with an icon, animated CountUp number, title, and description.
  */
 const StatCard = ({ item, cardVariants }) => {
-  const { id, number, suffix, title, description, icon: Icon, iconGradient } = item;
-  const titleId = `stat-title-${id}`;
+  const { id, number, suffix, title, description, icon, iconGradient } = item;
+  const titleId = `stat-title-${id || title}`;
+
+  // Helper to safely render icon whether it's a JSX Element (<Icon />) or a Component (Icon)
+  const renderIcon = () => {
+    if (!icon) return null;
+
+    const iconClasses = "w-7 h-7 text-[#123458] group-hover:text-blue-600 transition-colors duration-300";
+
+    // Case 1: icon is already a JSX Element like <Users />
+    if (React.isValidElement(icon)) {
+      return React.cloneElement(icon, {
+        className: `${iconClasses} ${icon.props.className || ''}`,
+        'aria-hidden': 'true'
+      });
+    }
+
+    // Case 2: icon is a Component reference like Users
+    const IconComponent = icon;
+    return <IconComponent className={iconClasses} aria-hidden="true" />;
+  };
 
   return (
     <motion.div
@@ -24,9 +43,9 @@ const StatCard = ({ item, cardVariants }) => {
       <div>
         {/* Icon Header */}
         <div className="flex items-center justify-between mb-6">
-          <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${iconGradient} p-0.5 shadow-md shadow-blue-900/10 group-hover:scale-110 transition-transform duration-300`}>
+          <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${iconGradient || 'from-blue-500 to-indigo-600'} p-0.5 shadow-md shadow-blue-900/10 group-hover:scale-110 transition-transform duration-300`}>
             <div className="w-full h-full bg-white rounded-[10px] flex items-center justify-center">
-              <Icon className="w-7 h-7 text-[#123458] group-hover:text-blue-600 transition-colors duration-300" aria-hidden="true" />
+              {renderIcon()}
             </div>
           </div>
           
@@ -40,10 +59,10 @@ const StatCard = ({ item, cardVariants }) => {
           <div className="text-4xl sm:text-5xl font-extrabold text-[#123458] tracking-tight flex items-baseline gap-0.5">
             <CountUp
               start={0}
-              end={number}
+              end={number || 0}
               duration={2.5}
               separator=","
-              suffix={suffix}
+              suffix={suffix || ''}
               enableScrollSpy
               scrollSpyOnce
             >
@@ -65,7 +84,7 @@ const StatCard = ({ item, cardVariants }) => {
         </p>
       </div>
 
-      {/* Screen reader text for full clarity */}
+      {/* Screen reader text */}
       <span className="sr-only">
         {number}{suffix} - {title}. {description}
       </span>
